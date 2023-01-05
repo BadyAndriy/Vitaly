@@ -195,7 +195,7 @@
 .content {
 	display: flex;
 	min-height: 100vh;
-	padding: 20px;
+	padding: 20px 5px 20px 20px;
 	.content__categories {
 		flex: 0 1 10%;
 		position: sticky;
@@ -205,19 +205,29 @@
 		flex-direction: column;
 		height: 100%;
 		margin: 15px 0 0 0;
-		box-shadow: 5px 2px 10px 2px rgba($color: #000, $alpha: .2);
+		border-radius: 10px;
+		overflow: hidden;
+		box-shadow: -2px -2px 8px white, -2px -2px 12px rgb(255 255 255 / 65%), inset 2px 2px 4px rgb(255 255 255 / 20%), 2px 2px 8px rgb(0 0 0 / 25%);
 		.content__btn {
 			padding: 12px 16px;
 			cursor: pointer;
 			font-size: 1.4rem;
 			background-color: #EBF3FF;
+			border-bottom: 1px solid rgba($color: #000, $alpha: .2);
+		}
+		.content__btn:nth-child(1) {
+			font-size: 1.8rem;
+			color: #ef8c17;
+		}
+		.content__btn:nth-last-child(1) {
+			border-bottom: none;
 		}
 		.content__btn:hover {
-			background-color: #525252;
+			background-color: #46484c;
 			color: #ef8c17;
 		}
 		.content__btn.active {
-			background-color: #525252;
+			background-color: #46484c;
 			color: #ef8c17;
 		}
 	}
@@ -232,18 +242,24 @@
 			min-height: 200px;
 			padding: 15px;
 			.content__wrapper {
-				box-shadow: 5px 2px 10px 2px rgba($color: #000, $alpha: .2);
+				position: relative;
+				border-radius: 10px;
+				box-shadow: -2px -2px 8px white, -2px -2px 12px rgb(255 255 255 / 65%), inset 2px 2px 4px rgb(255 255 255 / 20%), 2px 2px 8px rgb(0 0 0 / 25%);
 				.content__img {
 					overflow: hidden;
-					img {
+					border-radius: 10px 10px 0 0;
+					a {
+						img {
 						width: 100%;
+						}
 					}
 				}
 				.content__text {
 					display: flex;
 					padding: 10px;
+					border-radius: 0 0 10px 10px;
 					z-index: 2;
-					background: #525252;
+					background: #46484c;
 					.content__name {
 						flex: 0 1 70%;
 						margin: 0 10px 0 0;
@@ -263,21 +279,51 @@
 							color: #fff;
 						}
 					}
+					.content__description {
+						position: absolute;
+						top: 100%;
+						left: 0;
+						display: none;
+						padding: 10px;
+						z-index: 1;
+						background: #EBF3FF;
+						box-shadow: 0 10px 10px 5px rgba($color: #000, $alpha: .2);
+						p {
+							margin: 0 0 10px 0;
+							font-size: 1.4rem;
+							font-weight: 500;
+							line-height: 1.4em;
+							color: #000;
+							span {
+								margin: 0 10px 0 0;
+								font-size: 1.4rem;
+								font-weight: 600;
+								text-transform: uppercase;
+							}
+						}
+					}
 				}
 			}
 			.content__wrapper:hover {
-				box-shadow: 5px 2px 10px 2px rgba($color: #000, $alpha: .4);
+				
 				.content__img {
 					img {
 						transform: scale(1.05);
 					}
 				}
 				.content__text {
+					border-radius: 0;
 					h2 {
 						color: #ef8c17;
 					}
 					p {
 						color: #ef8c17;
+					}
+					.content__description {
+						display: block;
+						p {
+							color: #000;
+						}
 					}
 				}
 			}
