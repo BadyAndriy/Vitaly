@@ -73,7 +73,7 @@ for (var i = 0; i < btns.length; i++) {
 new Swiper('.first-slider',{
   // стрілки навігації
   navigation: {
-     nextEl: '.first__button-next',
+    nextEl: '.first__button-next',
     prevEl: '.first__button-prev',
   },
 
@@ -155,4 +155,4 @@ new Swiper('.first-slider',{
      crossFade: true,
   },
  
- });
+});
