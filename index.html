@@ -8,21 +8,22 @@
 	<link rel="stylesheet" href="assets/css/swiper.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<link rel="schortcut icon" href="assets/img/logo.png">
-	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 	<title>Vitaly</title>
 </head>
 <body>
 
 	<header class="header shadow">
 		<div class="header__logo">
+			<a href="#"><img src="assets/img/logo2.png" alt=""></a>
 			<a href="#"><img src="assets/img/logo.png" alt=""></a>
 		</div>
-		<div class="header__forever">
-			<span>З нами завжди на висоті</span>
-		</div>
 		<div class="header__contacts">
-			<a href="Tel:+380964185253">Тел: +380964185253 (офіс)</a>
-			<a href="mailto:vitalter@ukr.net">E-mail: vitalter@ukr.net</a>
+			<a href="Tel:+380964185253">+380964185253 (офіс)</a>
+			<a href="mailto:vitalter@ukr.net">vitalter@ukr.net</a>
+		</div>
+		<div class="header__login">
+			<a href="pages/config.html" class="shadow" title="Логін"><img src="assets/img/plus.png" alt=""></a>
+			<a href="pages/login.html" class="shadow" title="Логін"><img src="assets/img/lock.svg" alt=""></a>
 		</div>
 		<div class="header__menu-burger shadow">
 			<span></span>
@@ -30,15 +31,15 @@
 	</header>
 	
 	<div class="first">
-		<div class="first-slider swiper-container">
+		<div class="first-slider swiper-container shadow">
 			<!-- обов'язкова оболонка' -->
 			<div class="first__wrapper swiper-wrapper">
 				<!-- слайди -->
 				<div class="first__slide swiper-slide">
 					<div class="first__img">
-						<a href="pages/article.html"><img src="assets/img/gruntovka-universalna-lux.jpg" alt=""></a>
+						<a href="pages/article.html"><img src="contentPhoto/gruntovka-universalna-lux.jpg" alt=""></a>
 						<div class="first__button">
-							<a href="pages/article.html">Замовити</a>
+							<a href="pages/article.html">Про товар</a>
 						</div>
 					</div>
 					<div class="first__text">
@@ -55,13 +56,13 @@
 						<div class="first__description">
 							<p><span>Тара:</span>2 л, 5 л, 10 л.</p>
 							<p><span>Призначення:</span>грунтовка акрилова призначена для зміцнення штукатурки, шпатлівки, бетону, цегли, шлакоблоку, гіпсокартону, а також підготовки основи перед оздоблювальними роботами (фарбуванням, шпатлюванням, нанесенням штукатурки).</p>
-							<p><span>Витрати грунтовки на одношарове покриття:</span>100-200 г/м<sup>2</sup> в залежності від властивостей поверхонь.</p>
+							<p><span>Витрати:</span>100-200 г/м<sup>2</sup> в залежності від властивостей поверхонь.</p>
 						</div>
 					</div>
 				</div>
 				<div class="first__slide swiper-slide">
 					<div class="first__img">
-						<a href="#"><img src="assets/img/gruntovka-universalna.png" alt=""></a>
+						<a href="#"><img src="contentPhoto/gruntovka-universalna.png" alt=""></a>
 						<div class="first__button">
 							<a href="#">Замовити</a>
 						</div>
@@ -79,13 +80,13 @@
 						<div class="first__description">
 							<p><span>Тара:</span>1 л, 2 л, 5 л, 10 л.</p>
 							<p><span>Призначення:</span>універсальна стирол-акрилова, закріплююча грунтовка призначена для зміцнення мінеральних поверхонь (штукатурки, шпаклівки, бетону, цегли, шлакоблоку, гіпсокартону), а також підготовки основи перед оздоблювальними роботами (фарбуванням, шпаклюванням, нанесенням штукатурки), та зменшення водопоглинаючих властивостей основи, перед нанесенням лакофарбових матеріалів.</p>
-							<p><span>Витрати грунтовки на одношарове покриття:</span>100-200 г/м<sup>2</sup> в залежності від властивостей поверхонь.</p>
+							<p><span>Витрати:</span>100-200 г/м<sup>2</sup> в залежності від властивостей поверхонь.</p>
 						</div>
 					</div>
 				</div>
 				<div class="first__slide swiper-slide">
 					<div class="first__img">
-						<a href="#"><img src="assets/img/farba-gruntuvalna-kvarts-grunt.jpg" alt=""></a>
+						<a href="#"><img src="contentPhoto/farba-gruntuvalna-kvarts-grunt.jpg" alt=""></a>
 						<div class="first__button">
 							<a href="#">Замовити</a>
 						</div>
@@ -116,20 +117,74 @@
 	</div>
 
 	<div class="content">
-		<div class="content__categories shadow" id="content__categoriesbtn">
-			<button class="content__btn active" onclick="filterSelection('all')">Весь товар</button>
-			<button class="content__btn" onclick="filterSelection('toRepair')">Для ремонту</button>
-			<button class="content__btn" onclick="filterSelection('toConstruction')">Для будівництва</button>
-			<button class="content__btn" onclick="filterSelection('toRepair')">Для ремонту</button>
-			<button class="content__btn" onclick="filterSelection('toConstruction')">Для будівництва</button>
-			<button class="content__btn" onclick="filterSelection('toRepair')">Для ремонту</button>
-			<button class="content__btn" onclick="filterSelection('toConstruction')">Для будівництва</button>
+		<div class="content__categories shadow">
+			<a href="index.html">Весь товар</a>
+			<a href="index.html">Для ремонту</a>
+			<a href="index.html">Для будівництва</a>
+		</div>
+		<div class="content__menu-burger shadow">
+			<img src="assets/img/filter.svg" alt="">
+			<img src="assets/img/cross.svg" alt="">
 		</div>
 		<div class="content__items">
 			<div class="content__item all toRepair">
 				<div class="content__wrapper shadow">
+					<div class="content__cart">
+						<a href="#" title="Додати в корзину"><img src="assets/img/cart.png" alt=""></a>
+						<a href="#" title="Видалити"><img src="assets/img/trash-can.png" alt=""></a>
+					</div>
 					<div class="content__img">
-						<a href="pages/article.html"><img src="assets/img/loading.svg" data-src="assets/img/gruntovka-universalna-lux.jpg" alt="can't download img"></a>
+						<a href="pages/article.html"><img src="assets/img/loading.svg" data-src="contentPhoto/gruntovka-universalna-lux.jpg" alt="can't download img"></a>
+					</div>
+					<div class="content__text">
+						<div class="content__name">
+							<a href="pages/article.html"><h2>Грунтовка універсальна LUX</h2></a>
+						</div>
+						<div class="content__price">
+							<p>Ціна:</p>
+							<p>0 грн</p>
+						</div>
+						<div class="content__description">
+							<p><span>Тара:</span>2 л, 5 л, 10 л.</p>
+							<p><span>Призначення:</span>грунтовка акрилова призначена для зміцнення штукатурки, шпатлівки, бетону, цегли, шлакоблоку, гіпсокартону, а також підготовки основи перед оздоблювальними роботами (фарбуванням, шпатлюванням, нанесенням штукатурки).</p>
+							<p><span>Витрати грунтовки на одношарове покриття:</span>100-200 г/м<sup>2</sup> в залежності від властивостей поверхонь.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content__item all toRepair">
+				<div class="content__wrapper shadow">
+					<div class="content__cart">
+						<a href="#" title="Додати в корзину"><img src="assets/img/cart.png" alt=""></a>
+						<a href="#" title="Видалити"><img src="assets/img/trash-can.png" alt=""></a>
+					</div>
+					<div class="content__img">
+						<a href="pages/article.html"><img src="assets/img/loading.svg" data-src="contentPhoto/gruntovka-universalna-lux.jpg" alt="can't download img"></a>
+					</div>
+					<div class="content__text">
+						<div class="content__name">
+							<a href="pages/article.html"><h2>Грунтовка універсальна LUX</h2></a>
+						</div>
+						<div class="content__price">
+							<p>Ціна:</p>
+							<p>0 грн</p>
+						</div>
+						<div class="content__description">
+							<p><span>Тара:</span>2 л, 5 л, 10 л.</p>
+							<p><span>Призначення:</span>грунтовка акрилова призначена для зміцнення штукатурки, шпатлівки, бетону, цегли, шлакоблоку, гіпсокартону, а також підготовки основи перед оздоблювальними роботами (фарбуванням, шпатлюванням, нанесенням штукатурки).</p>
+							<p><span>Витрати грунтовки на одношарове покриття:</span>100-200 г/м<sup>2</sup> в залежності від властивостей поверхонь.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content__item all toRepair">
+				<div class="content__wrapper shadow">
+					<div class="content__cart">
+						<a href="#" title="Додати в корзину"><img src="assets/img/cart.png" alt=""></a>
+						<a href="#" title="Видалити"><img src="assets/img/trash-can.png" alt=""></a>
+					</div>
+					<div class="content__img">
+						<a href="pages/article.html"><img src="assets/img/loading.svg" data-src="contentPhoto/gruntovka-universalna-lux.jpg" alt="can't download img"></a>
 					</div>
 					<div class="content__text">
 						<div class="content__name">
@@ -149,8 +204,12 @@
 			</div>
 			<div class="content__item all toConstruction">
 				<div class="content__wrapper shadow">
+					<div class="content__cart">
+						<a href="#" title="Додати в корзину"><img src="assets/img/cart.png" alt=""></a>
+						<a href="#" title="Видалити"><img src="assets/img/trash-can.png" alt=""></a>
+					</div>
 					<div class="content__img">
-						<a href="#"><img src="assets/img/loading.svg" data-src="assets/img/gruntovka-universalna.png" alt=""></a>
+						<a href="#"><img src="assets/img/loading.svg" data-src="contentPhoto/gruntovka-universalna.png" alt=""></a>
 					</div>
 					<div class="content__text">
 						<div class="content__name">
@@ -170,8 +229,12 @@
 			</div>
 			<div class="content__item all toConstruction">
 				<div class="content__wrapper shadow">
+					<div class="content__cart">
+						<a href="#" title="Додати в корзину"><img src="assets/img/cart.png" alt=""></a>
+						<a href="#" title="Видалити"><img src="assets/img/trash-can.png" alt=""></a>
+					</div>
 					<div class="content__img">
-						<a href="#"><img src="assets/img/loading.svg" data-src="assets/img/farba-gruntuvalna-kvarts-grunt.jpg" alt=""></a>
+						<a href="#"><img src="assets/img/loading.svg" data-src="contentPhoto/farba-gruntuvalna-kvarts-grunt.jpg" alt=""></a>
 					</div>
 					<div class="content__text">
 						<div class="content__name">
@@ -189,13 +252,137 @@
 					</div>
 				</div>
 			</div>
-			
+			<div class="content__item all toRepair">
+				<div class="content__wrapper shadow">
+					<div class="content__cart">
+						<a href="#" title="Додати в корзину"><img src="assets/img/cart.png" alt=""></a>
+						<a href="#" title="Видалити"><img src="assets/img/trash-can.png" alt=""></a>
+					</div>
+					<div class="content__img">
+						<a href="pages/article.html"><img src="assets/img/loading.svg" data-src="contentPhoto/gruntovka-universalna-lux.jpg" alt="can't download img"></a>
+					</div>
+					<div class="content__text">
+						<div class="content__name">
+							<a href="pages/article.html"><h2>Грунтовка універсальна LUX</h2></a>
+						</div>
+						<div class="content__price">
+							<p>Ціна:</p>
+							<p>0 грн</p>
+						</div>
+						<div class="content__description">
+							<p><span>Тара:</span>2 л, 5 л, 10 л.</p>
+							<p><span>Призначення:</span>грунтовка акрилова призначена для зміцнення штукатурки, шпатлівки, бетону, цегли, шлакоблоку, гіпсокартону, а також підготовки основи перед оздоблювальними роботами (фарбуванням, шпатлюванням, нанесенням штукатурки).</p>
+							<p><span>Витрати грунтовки на одношарове покриття:</span>100-200 г/м<sup>2</sup> в залежності від властивостей поверхонь.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content__item all toRepair">
+				<div class="content__wrapper shadow">
+					<div class="content__cart">
+						<a href="#" title="Додати в корзину"><img src="assets/img/cart.png" alt=""></a>
+						<a href="#" title="Видалити"><img src="assets/img/trash-can.png" alt=""></a>
+					</div>
+					<div class="content__img">
+						<a href="pages/article.html"><img src="assets/img/loading.svg" data-src="contentPhoto/gruntovka-universalna-lux.jpg" alt="can't download img"></a>
+					</div>
+					<div class="content__text">
+						<div class="content__name">
+							<a href="pages/article.html"><h2>Грунтовка універсальна LUX</h2></a>
+						</div>
+						<div class="content__price">
+							<p>Ціна:</p>
+							<p>0 грн</p>
+						</div>
+						<div class="content__description">
+							<p><span>Тара:</span>2 л, 5 л, 10 л.</p>
+							<p><span>Призначення:</span>грунтовка акрилова призначена для зміцнення штукатурки, шпатлівки, бетону, цегли, шлакоблоку, гіпсокартону, а також підготовки основи перед оздоблювальними роботами (фарбуванням, шпатлюванням, нанесенням штукатурки).</p>
+							<p><span>Витрати грунтовки на одношарове покриття:</span>100-200 г/м<sup>2</sup> в залежності від властивостей поверхонь.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content__item all toRepair">
+				<div class="content__wrapper shadow">
+					<div class="content__cart">
+						<a href="#" title="Додати в корзину"><img src="assets/img/cart.png" alt=""></a>
+						<a href="#" title="Видалити"><img src="assets/img/trash-can.png" alt=""></a>
+					</div>
+					<div class="content__img">
+						<a href="pages/article.html"><img src="assets/img/loading.svg" data-src="contentPhoto/gruntovka-universalna-lux.jpg" alt="can't download img"></a>
+					</div>
+					<div class="content__text">
+						<div class="content__name">
+							<a href="pages/article.html"><h2>Грунтовка універсальна LUX</h2></a>
+						</div>
+						<div class="content__price">
+							<p>Ціна:</p>
+							<p>0 грн</p>
+						</div>
+						<div class="content__description">
+							<p><span>Тара:</span>2 л, 5 л, 10 л.</p>
+							<p><span>Призначення:</span>грунтовка акрилова призначена для зміцнення штукатурки, шпатлівки, бетону, цегли, шлакоблоку, гіпсокартону, а також підготовки основи перед оздоблювальними роботами (фарбуванням, шпатлюванням, нанесенням штукатурки).</p>
+							<p><span>Витрати грунтовки на одношарове покриття:</span>100-200 г/м<sup>2</sup> в залежності від властивостей поверхонь.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content__item all toConstruction">
+				<div class="content__wrapper shadow">
+					<div class="content__cart">
+						<a href="#" title="Додати в корзину"><img src="assets/img/cart.png" alt=""></a>
+						<a href="#" title="Видалити"><img src="assets/img/trash-can.png" alt=""></a>
+					</div>
+					<div class="content__img">
+						<a href="#"><img src="assets/img/loading.svg" data-src="contentPhoto/gruntovka-universalna.png" alt=""></a>
+					</div>
+					<div class="content__text">
+						<div class="content__name">
+							<a href="#"><h2>Грунтовка універсальна</h2></a>
+						</div>
+						<div class="content__price">
+							<p>Ціна:</p>
+							<p>1 грн</p>
+						</div>
+						<div class="content__description">
+							<p><span>Тара:</span>1 л, 2 л, 5 л, 10 л.</p>
+							<p><span>Призначення:</span>універсальна стирол-акрилова, закріплююча грунтовка призначена для зміцнення мінеральних поверхонь (штукатурки, шпаклівки, бетону, цегли, шлакоблоку, гіпсокартону), а також підготовки основи перед оздоблювальними роботами (фарбуванням, шпаклюванням, нанесенням штукатурки), та зменшення водопоглинаючих властивостей основи, перед нанесенням лакофарбових матеріалів.</p>
+							<p><span>Витрати грунтовки на одношарове покриття:</span>100-200 г/м<sup>2</sup> в залежності від властивостей поверхонь.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content__item all toConstruction">
+				<div class="content__wrapper shadow">
+					<div class="content__cart">
+						<a href="#" title="Додати в корзину"><img src="assets/img/cart.png" alt=""></a>
+						<a href="#" title="Видалити"><img src="assets/img/trash-can.png" alt=""></a>
+					</div>
+					<div class="content__img">
+						<a href="#"><img src="assets/img/loading.svg" data-src="contentPhoto/farba-gruntuvalna-kvarts-grunt.jpg" alt=""></a>
+					</div>
+					<div class="content__text">
+						<div class="content__name">
+							<a href="#"><h2>Фарба грунтувальна кварц грунт</h2></a>
+						</div>
+						<div class="content__price">
+							<p>Ціна:</p>
+							<p>2 грн</p>
+						</div>
+						<div class="content__description">
+							<p><span>Тара:</span>1.4 кг, 3 кг, 6 кг, 12кг.</p>
+							<p><span>Призначення:</span>фарба грунтувальна призначена для підготовки основ з бетону, цементних та цементно-вапняних штукатурок, гіпсу, гіпсокартонних листів перед нанесенням акрилових та мінеральних декоративних штукатурок. Для внутрішніх та зовнішніх робіт.</p>
+							<p><span>Витрати:</span>250-300 г/м<sup>2</sup>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
 	<footer class="footer shadow">
 		<div class="footer__logo">
-			<a href="#"><img src="assets/img/logo2.png" alt=""></a>
+			<a href="#"><img src="assets/img/logo.png" alt=""></a>
 		</div>
 		<div class="footer__contacts">
 			<div class="footer__phones">
