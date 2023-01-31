@@ -221,7 +221,7 @@
 			padding: 10px;
 			cursor: pointer;
 			font-size: calc(18px + (22 - 18) * ((100vw - 320px) / (2560 - 320)));
-			background-color: #EBF3FF;
+			background: #EBF3FF;
 			border-bottom: 1px solid rgba($color: #000, $alpha: .2);
 		}
 		a:nth-last-child(1) {
@@ -255,15 +255,39 @@
 				height: 100%;
 				border-radius: 10px;
 				.content__cart {
-					display: flex;
-					justify-content: space-between;
-					padding: calc(5px + (10 - 5) * ((100vw - 320px) / (2560 - 320))) calc(5px + (10 - 5) * ((100vw - 320px) / (2560 - 320))) 0 calc(5px + (10 - 5) * ((100vw - 320px) / (2560 - 320)));
+					position: absolute;
+					top: 0;
+					left: 0;
+					padding: 0;
+					z-index: 1;
+					border-radius: 0 0 10px 0;
+					background: #EBF3FF;
 					a {
 						padding: 5px;
-						border-radius: 10px;
+						border-radius: 0 0 10px 0;
 						img {
-							width: 30px;
-							height: 30px;
+							width: calc(20px + (40 - 20) * ((100vw - 320px) / (2560 - 320)));
+							height: calc(20px + (40 - 20) * ((100vw - 320px) / (2560 - 320)));
+						}
+					}
+					a:hover {
+						background: rgba($color: #ef8c17, $alpha: .4);
+					}
+				}
+				.content__delete {
+					position: absolute;
+					top: 0;
+					right: 0;
+					padding: 0;
+					z-index: 1;
+					border-radius: 0 0 0 10px;
+					background: #EBF3FF;
+					a {
+						padding: 5px;
+						border-radius: 0 0 0 10px;
+						img {
+							width: calc(20px + (40 - 20) * ((100vw - 320px) / (2560 - 320)));
+							height: calc(20px + (40 - 20) * ((100vw - 320px) / (2560 - 320)));
 						}
 					}
 					a:hover {
@@ -295,16 +319,13 @@
 					}
 				}
 				.content__text {
-					display: flex;
-					justify-content: space-between;
 					padding: calc(5px + (10 - 5) * ((100vw - 320px) / (2560 - 320)));
 					border-radius: 0 0 10px 10px;
 					background: #46484c;
 					.content__name {
-						margin: 0 10px 0 0;
 						h2 {
 							word-break: break-all;
-							font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (2560 - 320)));
+							font-size: calc(14px + (20 - 14) * ((100vw - 320px) / (2560 - 320)));
 							line-height: 1.2em;
 							letter-spacing: 1px;
 							color: #fff;
@@ -317,7 +338,7 @@
 						
 					}
 					.content__price {
-						
+						margin: 5px 0 0 0;
 						p {
 							font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (2560 - 320)));
 							line-height: 1.2em;
@@ -330,15 +351,15 @@
 						left: 0;
 						display: none;
 						width: 100%;
-						max-height: 255px;
+						max-height: 260px;
 						padding: 10px 10px 5px 10px;
 						overflow-y: auto;
-						z-index: 1;
+						z-index: 2;
 						background: #EBF3FF;
 						box-shadow: 0 10px 10px 5px rgba($color: #000, $alpha: .2);
 						p {
 							margin: 0 0 5px 0;
-							font-size: 1.3rem;
+							font-size: calc(16px + (20 - 16) * ((100vw - 320px) / (2560 - 320)));
 							font-weight: 500;
 							line-height: 1.2em;
 							color: #000;
@@ -368,23 +389,28 @@
 /* footer ===================================================================== */
 .footer {
 	display: flex;
-	flex-direction: column;
 	margin: 40px 0 0 0;
 	padding: 20px;
 	.footer__logo {
+		flex: 1 1 50%;
 		text-align: center;
 		a {
 			img {
 				width: 50%;
 			}
 		}
+		a:nth-child(2) {
+			img {
+				display: none;
+			}
+		}
 	}
 	.footer__contacts {
+		flex: 1 1 50%;
 		display: flex;
 		justify-content: space-around;
 		margin: 20px 0 0 0;
 		p {
-			word-break: break-all;
 			font-size: calc(16px + (26 - 16) * ((100vw - 320px) / (2560 - 320)));
 			line-height: 1.2em;
 		}
@@ -932,6 +958,34 @@ body {
 	body.active {
 		overflow: hidden;
 	}
+	.footer {
+		flex-direction: column;
+		margin: 20px 0 0 0;
+		padding: 10px;
+		.footer__logo {
+			a:nth-child(1) {
+				img {
+					display: none;
+				}
+			}
+			a:nth-child(2) {
+				img {
+					display: inline-block;
+				}
+			}
+		}
+		.footer__contacts {
+			p {
+				font-size: calc(14px + (22 - 14) * ((100vw - 320px) / (2560 - 320)));
+			}
+			.footer__phones {
+				margin: 0 10px 0 0;
+			}
+			.footer__mail {
+
+			}
+		}
+	}
 }
 @media (max-width: 768px) {
 	.header {
@@ -1038,6 +1092,18 @@ body {
 			.content__item {
 				flex: 0 1 50%;
 				padding: 5px;
+				.content__wrapper {
+					.content__text {
+						.content__description {
+							display: none !important;
+						}
+					}
+				}
+				.content__wrapper:hover {
+					.content__text {
+						border-radius: 0 0 10px 10px;
+					}
+				}
 			}
 		}
 	}
